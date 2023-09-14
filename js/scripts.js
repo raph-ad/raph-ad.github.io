@@ -27,8 +27,20 @@ window.onscroll = function() {
     checkScroll()
 };
 
-
 var viewGallery = document.getElementById("view-gallery");
+var form = document.getElementById("form");
+var coord = form.getBoundingClientRect();
+const mediaQueryMobile = window.matchMedia('(min-width: 768px)');
+
+function focusInput() {
+    if (mediaQueryMobile.matches) {
+        document.getElementById("name").focus();
+        console.log("norm")
+    } else {
+    document.getElementById("name-mobile").focus();
+    console.log("mob")
+    }
+}
 
 function hideViewGallery () {
     if (window.scrollY < 5) {
@@ -38,8 +50,6 @@ function hideViewGallery () {
     }; 
 };
 
-var form = document.getElementById("form");
-var coord = form.getBoundingClientRect();
 
 window.addEventListener("resize", (event) => {
     coord = form.getBoundingClientRect();
