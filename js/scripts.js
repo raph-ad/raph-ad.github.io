@@ -35,10 +35,10 @@ const mediaQueryMobile = window.matchMedia('(min-width: 768px)');
 function focusInput() {
     if (mediaQueryMobile.matches) {
         document.getElementById("name").focus();
-        console.log("norm")
+        // console.log("norm")
     } else {
     document.getElementById("name-mobile").focus();
-    console.log("mob")
+    // console.log("mob")
     }
 }
 
@@ -53,7 +53,7 @@ function hideViewGallery () {
 
 window.addEventListener("resize", (event) => {
     coord = form.getBoundingClientRect();
-    console.log("resize");
+    // console.log("resize");
 });
 
 
@@ -63,16 +63,16 @@ function checkScroll () {
         form.style.position = "fixed";
         form.style.top = "0";
         form.style.bottom = "auto";
-        console.log("if");
-        console.log(window.scrollY);
+        // console.log("if");
+        // console.log(window.scrollY);
     } 
         else {
         // form.style.backgroundColor = "#ff0000"
         form.style.position = "absolute";
         form.style.bottom = "6.8rem";
         form.style.top = "auto";
-        console.log("else");
-          console.log(window.scrollY);
+        // console.log("else");
+        //   console.log(window.scrollY);
       }
 };
 

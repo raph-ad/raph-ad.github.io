@@ -263,12 +263,6 @@ footer .ad-logo  {
     color: var(--clr-dark);
 }
 
-.mobile-form.container {
-    background-color: var(--clr-dark);
-    padding-top: 0;
-    padding-bottom: 3.25rem;
-}
-
 .sticky {
     position: fixed !important;
     top: 0 !important;
@@ -531,6 +525,12 @@ footer p {
     .container {
         padding-left: 1.25rem;
         padding-right: 1.25rem;
+    }
+
+    .mobile-form.container {
+        background-color: var(--clr-dark);
+        padding-top: 0;
+        padding-bottom: 3.25rem;
     }
 
     #mobile-form {
