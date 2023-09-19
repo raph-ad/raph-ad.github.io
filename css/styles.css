@@ -182,6 +182,17 @@ footer .ad-logo  {
     gap: 0.25rem;
 }
 
+h3 svg {
+    /* shift baseline */
+    top: .125em;
+    position: relative;
+    /* stop svg from shrinking with flexbox */
+    flex-shrink: 0;
+    /* same size as H3 */
+    height: clamp(1.125rem, 1.875vw, 1.875rem);
+    width: clamp(1.125rem, 1.875vw, 1.875rem);
+}
+
 .icon-text svg path {
     stroke: var(--clr-heading);
 }
@@ -239,6 +250,7 @@ footer .ad-logo  {
     padding: 1.875rem;
     gap: 1.875rem;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 #form h2 {
@@ -287,6 +299,13 @@ footer .ad-logo  {
     color: var(--clr-dark);
 }
 
+.form-divider {
+    display: block;
+    height: 0.1rem;
+    background-color: var(--clr-dark);
+    width: 100%;
+}
+
 .enquire-form input,
 .enquire-form select {
     width: 100%;
@@ -295,7 +314,7 @@ footer .ad-logo  {
     color: var(--clr-dark);
     padding: 1rem;
     border: 0 none;
-    border-bottom: 0.1rem solid var(--clr-dark);
+    /* border-bottom: 0.1rem solid var(--clr-dark); */ /*replaced by .form-divider */
 }
 
 .enquire-form input:focus,
@@ -471,10 +490,10 @@ footer .ad-logo  {
     flex: 3;
 }
 
-
 .display-info {
     gap: 0.25rem;
 }
+
 
 .map {
     height: 572.8px;
@@ -484,6 +503,10 @@ footer .ad-logo  {
     width: 100%;
     height: 572.8px;
     object-fit: cover;
+}
+
+.location .btn.enquire-cta {
+    margin-top: 0;
 }
 
 /* Footer */
@@ -503,6 +526,13 @@ footer p {
 @media screen and (min-width: 1440px) {
     .container {
         max-width: 1440px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-info {
+        flex-direction: column-reverse;
+        gap: 1.25rem;
     }
 }
 
@@ -542,6 +572,12 @@ footer p {
     .gallery-frame {
         padding-top: 1.875rem;
         grid-template-columns: 1fr;
+    }
+    .gallery-frame .cover-image {
+        position: relative;
+    }
+    .gallery-frame > .item > .cover {
+        aspect-ratio: auto !important;
     }
     .gallery-frame .item:nth-child(n) {
         grid-column: span 4;

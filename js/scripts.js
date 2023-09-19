@@ -30,15 +30,14 @@ window.onscroll = function() {
 var viewGallery = document.getElementById("view-gallery");
 var form = document.getElementById("form");
 var coord = form.getBoundingClientRect();
-const mediaQueryMobile = window.matchMedia('(min-width: 768px)');
+const mediaQueryMobile = window.matchMedia('(max-width: 768px)');
 
 function focusInput() {
+    console.log("focusInput running")
     if (mediaQueryMobile.matches) {
-        document.getElementById("name").focus();
-        // console.log("norm")
+        document.getElementById("name-mobile").focus();
     } else {
-    document.getElementById("name-mobile").focus();
-    // console.log("mob")
+        document.getElementById("name").focus();
     }
 }
 
@@ -57,36 +56,49 @@ window.addEventListener("resize", (event) => {
 });
 
 
+//  ORIGINAL SCROLL FUNCTION
+//  function checkScroll () {
+//     console.log(window.scrollY)
+//     if (window.scrollY + 52 >= coord.top) {
+//         // form.style.backgroundColor = "#000000";
+//         form.style.position = "fixed";
+//         form.style.top = "0";
+//         form.style.bottom = "auto";
+//         form.style.boxShadow = "0 4px 8px #00000040";
+//         // console.log("if");
+//         // console.log(window.scrollY);
+//     } 
+//         else {
+//         // form.style.backgroundColor = "#ff0000"
+//         form.style.position = "absolute";
+//         form.style.bottom = "6.8rem";
+//         form.style.top = "auto";
+//         form.style.boxShadow = "none";
+//         // console.log("else");
+//         //   console.log(window.scrollY);
+//       }
+// };
+
 function checkScroll () {
-    if (window.scrollY + 52 >= coord.top) {
-        // form.style.backgroundColor = "#000000";
-        form.style.position = "fixed";
-        form.style.top = "0";
-        form.style.bottom = "auto";
-        // console.log("if");
-        // console.log(window.scrollY);
-    } 
-        else {
-        // form.style.backgroundColor = "#ff0000"
+    if (window.scrollY <= 100) {
         form.style.position = "absolute";
         form.style.bottom = "6.8rem";
         form.style.top = "auto";
-        // console.log("else");
-        //   console.log(window.scrollY);
+        form.style.boxShadow = "none";
+    }
+
+        else if (window.scrollY + 52 >= coord.top) {
+            form.style.position = "fixed";
+            form.style.top = "0";
+            form.style.bottom = "auto";
+            form.style.boxShadow = "0 4px 8px #00000040";
+
+        }
+
+        else {
+        form.style.position = "absolute";
+        form.style.bottom = "6.8rem";
+        form.style.top = "auto";
+        form.style.boxShadow = "none";
       }
 };
-
-// console.log(window.scrollY);
-    // console.log(form.offsetTop);
-    // if ((window.scrollY + 52) >= (form.offsetTop)) {
-    //     form.style.position = "fixed";
-    //         form.style.top = "0";
-    //         form.style.bottom = "auto";
-    //         console.log("else");
-    // }
-    // else if ((window.scrollY + 52) <= (form.offsetTop)) {
-    //     form.style.position = "absolute";
-    //     form.style.bottom = "6.8rem";
-    //     form.style.top = "auto";
-    //     console.log("if");
-    // }
