@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1512 525" style="enable-background:new 0 0 1512 525;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:url(#SVGID_3_);}
+	.st2{clip-path:url(#SVGID_5_);fill:url(#SVGID_6_);}
+	.st3{fill:#F66AA7;}
+</style>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M16,0h1480c8.8,0,16,7.2,16,16v493c0,8.8-7.2,16-16,16H16c-8.8,0-16-7.2-16-16V16C0,7.2,7.2,0,16,0z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g class="st0">
+		
+			<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="639.5862" y1="317.7232" x2="1469.0542" y2="-69.075" gradientTransform="matrix(1 0 0 -1 0 525.9375)">
+			<stop  offset="0" style="stop-color:#F66AA7"/>
+			<stop  offset="0.7031" style="stop-color:#EE4886"/>
+			<stop  offset="0.9948" style="stop-color:#F66AA7"/>
+		</linearGradient>
+		<path class="st1" d="M16,0h1480c8.8,0,16,7.2,16,16v493c0,8.8-7.2,16-16,16H16c-8.8,0-16-7.2-16-16V16C0,7.2,7.2,0,16,0z"/>
+		<g>
+			<defs>
+				<path id="SVGID_4_" d="M8.3,0h767.1c4.6,0,8.3,7.2,8.3,16v493c0,8.8-3.7,16-8.3,16H8.3c-4.6,0-8.3-7.2-8.3-16V16
+					C0,7.2,3.7,0,8.3,0z"/>
+			</defs>
+			<clipPath id="SVGID_5_">
+				<use xlink:href="#SVGID_4_"  style="overflow:visible;"/>
+			</clipPath>
+			
+				<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="-45.4662" y1="355.2864" x2="1357.9518" y2="-299.1566" gradientTransform="matrix(-1 0 0 1 1512 -0.9365)">
+				<stop  offset="0" style="stop-color:#F66AA7"/>
+				<stop  offset="0.4182" style="stop-color:#D51F56"/>
+				<stop  offset="0.9948" style="stop-color:#F66AA7"/>
+			</linearGradient>
+			<path class="st2" d="M2692.2,525H28.8C12.9,525,0,517.8,0,509V16C0,7.2,12.9,0,28.8,0h2663.4c15.9,0,28.8,7.2,28.8,16v493
+				C2721,517.8,2708.1,525,2692.2,525z"/>
+		</g>
+		<g>
+			<path class="st3" d="M1199,525L0,525L261.8,0h1196.7L1199,525z"/>
+		</g>
+	</g>
+</g>
+</svg>

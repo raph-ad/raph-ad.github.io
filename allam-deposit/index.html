@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Homes or Land 5% deposit - Allam's Deposit Match</title>
+
+  <meta name="description" content="Allam will match your 5% deposit to help open the door to your dream property sooner! Limited time only. All homes or land.">
+
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Disallow Google from indexing, and following links -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let form = document.getElementById("claim-form");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let url = new URL(window.location.href);
+        let params = Object.fromEntries(url.searchParams);
+        let formData = new FormData(form);
+        let data = Object.fromEntries(formData);
+        send({
+          ...data,
+          ...params,
+          ...{
+            url: window.location.href
+          }
+        });
+      });
+    })
+
+    function send(data) {
+      let xhr = new XMLHttpRequest();
+      let url = "https://hooks.zapier.com/hooks/catch/9128763/35gukoy/";
+      xhr.open("POST", url, true);
+      //   xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+      //   xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          let json = JSON.parse(xhr.responseText);
+        }
+        window.location.href = "https://www.allam.com.au/";
+      };
+      xhr.send(JSON.stringify(data));
+    }
+
+    function goToForm() {
+      document.getElementById("first_name").focus({
+        preventScroll: false
+      });
+    }
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TVKQ9QV');
+  </script>
+  <!-- End Google Tag Manager -->
+
+<link rel="stylesheet" href="https://localhost:57094/stylesheet?id=m-qsU1haBixB19PM"></head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVKQ9QV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="container">
+      <img src="img/logo-bg.svg" alt="Allam Property Group" class="logo">
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero | px-15">
+      <div class="container">
+        <div class="title d-grid col-sm-1 col-md-1">
+          <div class="left">
+            <h2 class="text-light">
+              Save up to $100K with Allam's<br>
+              5% Deposit Match + Bonus Discount!*
+            </h2>
+            
+            <h4 class="text-light">Limited time offer. T&C's apply.
+            </h4>
+          </div>
+          <img src="img/15037_Pigs _ Coins-cropped.png" alt="Piggybank" class="piggybank">
+          <img src="img/15037_House.png" alt="House-Line" class="lifesaver">
+          <!-- <img src="img/buoy-700px.png" alt="$100K Lifesaver" class="lifesaver"> -->
+        </div>
+
+        <div class="form-box | bg-grey | d-grid">
+
+          <div class="ribbon-band">
+            Limited <br>time only
+          </div>
+
+          <h3>Claim this Offer to Browse Eligible Home and Land
+          </h3>
+
+          <h5>Register your details and Allam will match your 5% deposit on homes and land at one of our participating estates. Plus, unlock extra savings with a Bonus Discount* on select new homes.</h5>
+
+          <form action="" id="claim-form" name="claimForm">
+            <div class="row d-grid col-2 col-sm-1">
+              <div class="field-item">
+                <label>First name</label>
+                <input type="text" name="first_name" required id="first_name" value="">
+              </div>
+
+              <div class="field-item">
+                <label>Last name</label>
+                <input type="text" name="last_name" id="last_name" required value="">
+              </div>
+
+              <div class="field-item">
+                <label>Phone</label>
+                <input type="tel" name="phone" id="phone" required value="">
+
+              </div>
+
+              <div class="field-item">
+                <label>Postcode</label>
+                <input type="number" name="postcode" id="postcode" required pattern="\d*" value="">
+              </div>
+
+              <div class="field-item">
+                <label>Email</label>
+                <input type="email" name="email" id="email" required value="">
+              </div>
+
+              <div class="field-item">
+                <label>Which estate are you interested in?
+                </label>
+
+                <div class="field">
+                  <select name="estate" id="estate" required>
+                    <option value="" selected disabled>&nbsp;&nbsp;&nbsp;- Choose one -</option>
+                    <option value="Ardennes, Edmondson Park">&nbsp;&nbsp;&nbsp;Ardennes, Edmondson Park</option>
+                    <option value="The Groves, Austral">&nbsp;&nbsp;&nbsp;The Groves, Austral</option>
+                    <option value="Madison Rise, Woongarrah">&nbsp;&nbsp;&nbsp;Madison Rise, Woongarrah</option>
+                    <option value="Ravenswood, Tullimbar">&nbsp;&nbsp;&nbsp;Ravenswood, Tullimbar</option>
+                    <option value="Killarney, Box Hill">&nbsp;&nbsp;&nbsp;Killarney, Box Hill</option>
+                    <option value="Redgum Rise, Oakville">&nbsp;&nbsp;&nbsp;Redgum Rise, Oakville</option>
+                    <option value="Mirragan, Silverdale">&nbsp;&nbsp;&nbsp;Mirragan, Silverdale</option>
+                    <option value="Monterey, Kendall">&nbsp;&nbsp;&nbsp;Nakuru, Silverdale</option>
+                    <option value="Sophia Waters, Chisholm">&nbsp;&nbsp;&nbsp;Sophia Waters, Chisholm</option>
+                    <option value="Monterey, Kendall">&nbsp;&nbsp;&nbsp;Monterey, Kendall</option>
+                    <!-- <option value="Alkyra, Beveridge">&nbsp;&nbsp;&nbsp;Alkyra, Beveridge</option> -->
+                  </select>
+
+                  <?xml version="1.0" encoding="UTF-8"?><svg width="44px" height="44px" viewBox="0 0 24 24" stroke-width="2" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                    <path d="M17 8l-5-5-5 5M17 16l-5 5-5-5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                </div>
+              </div>
+            </div>
+
+            <input type="submit" class="btn | submit-btn" value="Claim now and browse lots">
+            <div class="disclaimer">Disclaimer: By submitting this form you are agreeing to be added to Allam’s mailing list.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about | py-lg | px-15">
+      <div class="container">
+        <h2>Are you ready to embark on a journey to your new dream home?</h2>
+        <h5>Allam will <strong>match your 5% deposit*</strong> to help open the door to your dream home sooner and you could also be eligible for a <strong>BONUS discount*.</strong> Saving up to $100K.</h5>
+
+        <div class="gallery d-grid">
+          <img src="img/homes_and_land-01.webp" alt="" role="presentation">
+          <img src="img/homes_and_land-02.webp" alt="" role="presentation">
+          <img src="img/homes_and_land-03.webp" alt="" role="presentation">
+        </div>
+
+        <div class="text">
+          <p>Unlocking the door to your new home is now more financially rewarding with Allam's exclusive <strong>5% Deposit Match & BONUS Discount offer*.</strong> Saving you up to $100,000*.</p>
+          <p>Purchase your dream home today with Allam and enjoy the perks of a <strong>5% deposit match,</strong> an invaluable boost to your initial investment. This means that for every step you take towards homeownership, Allam takes one with you, lightening the financial load.</p>
+          <p>As if that's not enticing enough, buyers can also receive a <strong>BONUS discount</strong> on selected homes, making the home-buying journey not just a practical choice but a smart and economical one.</p>
+          <p>Allam is dedicated to turning your homeownership dreams into reality while ensuring that you <strong>SAVE BIG</strong> on your new home purchase.</p>
+          <p><strong>Don't miss out on the opportunity to secure your future with Allam's unbeatable 5% deposit match and bonus discount offer.</strong></p>
+          <p><strong>This exclusive offer is valid until 30th November, so you must hurry!</strong></p>
+
+          <small>*Offer excludes Monterey and Alkyra. Bonus discount is available on selected homes only. Terms and conditions apply.</small>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="estates | bg-grey | py-lg | px-15 | text-center">
+      <div class="container">
+        <h2>Offer available at these<br>
+          Allam estates:</h2>
+        <div class="row d-grid col-3 col-md-2">
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/RedgumA.svg" alt="">
+          </a>
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/TheGrovesA.svg" alt="">
+          </a>
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/ArdennesA.svg" alt="">
+          </a>
+
+          <!-- <a onclick="goToForm()">
+            <img src="img/estates/upscaled/48e9bf07-alkyra_106203e000000000000028.png" alt="">
+          </a> -->
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/NakuruA.svg" alt="">
+          </a>
+
+          <!-- <a onclick="goToForm()">
+            <img src="img/estates/upscaled/monterey-camden-haven.png" alt="">
+          </a> -->
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/RavenswoodA.svg" alt="">
+          </a>
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/MirraganA.svg" alt="">
+          </a>
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/MadisonA.svg" alt="">
+          </a>
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/SophiaA.svg" alt="">
+          </a>
+
+          <a onclick="goToForm()">
+            <img src="img/estates/svg/KillarneyA.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="choose | py-lg | px-15">
+      <div class="container | row d-grid | col-3 | col-md-2 | col-sm-1">
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/6b21ebe1-type-easybuy-purchase.svg" alt="">
+            <h4 class="heading">EasyBuy<br>
+              Purchase</h4>
+          </div>
+
+          <p>The easy way to buy a home with a fixed price single contract with no progress payments.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/63be3f3e-type-turnkey-homes.svg" alt="">
+            <h4 class="heading">Turnkey<br>
+              Homes </h4>
+          </div>
+
+          <p>New ready build homes, all-inclusive with nothing more to do. Allam include the lot.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/444bcbc6-type-move-now-or-later.svg" alt="">
+            <h4 class="heading">Move Now<br>
+              or Later</h4>
+          </div>
+
+          <p>Allam has a great variety of new homes at various stages of construction.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/9e8ff41a-type-choice-of-designs.svg" alt="">
+            <h4 class="heading">Choice of<br>
+              Designs</h4>
+          </div>
+
+          <p>Allam have a range of homes to suit everyone. Find the perfect design for you.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/907f5e4a-type-popular-locations.svg" alt="">
+            <h4 class="heading">Popular<br>
+              Locations</h4>
+          </div>
+
+          <p>Allam builds in popular locations across Sydney, the Central Coast, Illawarra and the Hunter Valley.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/cd8c2603-type-value-and-service.svg" alt="">
+            <h4 class="heading">Value and<br>
+              Service</h4>
+          </div>
+
+          <p>Purchasing direct from the developer means every Allam home delivers outstanding value.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/ad0a364c-type-planned-estates-icon.svg" alt="">
+            <h4 class="heading">Planned<br>
+              Estates</h4>
+          </div>
+
+          <p>Every detail of Allam's estates are thoroughly considered to deliver exceptional neighbourhoods.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/82c85ce5-type-quality-and-detail.svg" alt="">
+            <h4 class="heading">Quality and<br>
+              Detail</h4>
+          </div>
+
+          <p>Allam's quality covers every single aspect of your new home, all backed by our warranty.</p>
+        </div>
+
+        <div class="item">
+          <div class="title d-grid col-sm-1">
+            <img src="img/icons/131aeca4-type-30-years-icon.svg" alt="">
+            <h4 class="heading">The Allam<br>
+              Success</h4>
+          </div>
+
+          <p>Established in 1991, Allam is Australian owned and trusted with building homes for 30 years.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="box">
+        <div class="container | d-grid | row | col-md-1">
+          <div class="left">
+            <h2><strong>Hurry!</strong>
+              Limited time offer ends soon.
+            </h2>
+            <div class="btn | btn-dark"><a onclick="goToForm()">Claim now and browse</a></div>
+          </div>
+
+          <img src="img/15037_Pigs _ Coins-cropped.png" alt="" class="graphic">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="d-grid | col-sm-1">
+    <div class="left">
+      <img src="img/logo-bg.svg" alt="Allam Property Group" class="logo">
+      <a href="https://www.allam.com.au/disclaimer" target="_blank">Disclaimer</a>
+      <a href="https://www.allam.com.au/terms-conditions" target="_blank">Terms and Conditions</a>
+      <a href="https://www.allam.com.au/privacy-policy" target="_blank">Privacy Policy</a>
+    </div>
+    <span class="co">&copy; ALLAM PROPERTY GROUP</span>
+  </footer>
+
+</body>
+
+</html>

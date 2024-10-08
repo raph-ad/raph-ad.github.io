@@ -1,0 +1,20 @@
+/* Grid container */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: var(--width-container);
+  width: 100%;
+  --width-container: clamp(1200px, 80vw, 1400px);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    --width-container: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    --width-container: 100%;
+  }
+}

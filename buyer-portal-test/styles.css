@@ -1,0 +1,236 @@
+/* Fonts */
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "TTCommonsPro";
+    src: url("../fonts/TT_Commons_Regular.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 500;
+    font-style: normal;
+    font-family: "TTCommonsPro";
+    src: url("../fonts/TT_Commons_Medium.otf");
+    font-display: swap;
+}
+
+@font-face {
+    font-weight: 600;
+    font-style: normal;
+    font-family: "TTCommonsPro";
+    src: url("../fonts/TT_Commons_DemiBold.otf");
+    font-display: swap;
+}
+
+/* Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "TTCommonsPro", sans-serif;
+    margin: 52px 84px 0 84px;
+}
+
+.dflex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.frow {
+    flex-direction: row;
+}
+
+.fcol {
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+p>em {
+    font-weight: 500;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-family: "TTCommonsPro", sans-serif;
+}
+
+.btn-20 {
+    font-size: 20px;
+}
+
+.btn-25 {
+    font-size: 25px;
+}
+
+.btn-primary {
+    background-color: #012345;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: black;
+    border: 1px solid #777;
+}
+
+#unit-columns {
+    gap: 52px;
+}
+
+.unit-gallery {
+    flex: 2;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 52px - 32px);
+}
+
+.unit-gallery > * {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.unit-gallery > :first-child {
+    height: calc(calc(100vh - 52px - 32px - 20px - 20px) / 2);
+    grid-column: 1 / 3;
+}
+
+.unit-gallery :nth-child(n+2) {
+    height: calc(calc(100vh - 52px - 32px - 20px - 20px) / 4);
+}
+
+.unit-gallery :nth-child(4) {
+    grid-column: 1 / 3;
+}
+
+.unit-gallery .cover {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url(../res/fabbrica-map.png);
+    background-size: cover; */
+}
+
+.unit-gallery .cover h3 {
+    position: relative;
+    z-index: 2;
+
+    
+}
+
+.unit-gallery .cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.unit-gallery .cover .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(243, 243, 243, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+
+.unit-content {
+    flex: 1;
+    max-width: 583px;
+    min-width: 518px;
+}
+
+.unit-content > div {
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.unit-content .unit-title {
+    gap: 20px;
+    padding-bottom: 32px;
+}
+
+.unit-content .unit-title .buttons {
+    width: 100%;
+    gap: 12px;
+}
+
+.unit-content .unit-title .buttons .btn {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    min-width: max-content;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1700px) {
+    .unit-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .unit-gallery > :first-child {
+        grid-column: 1 / 4;
+        height: 100%;
+    }
+
+    .unit-gallery > :nth-child(4) {
+        grid-column: 3 / 4;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .unit-content {
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #unit-columns {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .unit-gallery :nth-child(n+2) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 16px;
+    }
+    
+}
